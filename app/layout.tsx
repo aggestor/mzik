@@ -12,10 +12,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className="bg-zinc-800" lang="en">
+    <html className="bg-gray-100" lang="en">
       <body>
         <NavBar/>
-        <main>{children}</main>
+        <main className="m-4">{children}</main>
         <Footer/>
       </body>
     </html>
