@@ -4,6 +4,7 @@ declare type Props = {
     text:string,
     variant?:'blue'|'neutral'|'red'|'green',
     size?:"full"|"fit"
+    icon?:JSX.Element
 }
 export const Button :FunctionComponent<Props> = ({text,variant = 'base', size = "fit"}) =>{
     if(variant === "neutral")
