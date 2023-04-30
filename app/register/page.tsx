@@ -1,8 +1,11 @@
+"use client"
 import { FunctionComponent } from "react";
 import Image from "next/image"
 import { Textbox } from "@/components/Textbox";
+import useForm from "@/hooks/useForm";
 
 const RegisterPage : FunctionComponent = () =>{
+    const [{name}, onChange] = useForm({name:""})
     return <section className=" h-full w-full">
         <div className="w-10/12 mx-auto h-auto p-5 flex justify-between shadow-md bg-white rounded-md shadow-gray-300">
             <div className="w-1/2">
@@ -11,7 +14,7 @@ const RegisterPage : FunctionComponent = () =>{
                 </h1>
                 <p className="text-gray-600">Fill all the fields of the form bellow then register to create an new account.</p>
                 <form className="w-10/12">
-                    <Textbox value="test" name="" label="Names"/>
+                    <Textbox value={name as string} name={'name'} onChange={onChange} label="Names"/>
                 </form>
             </div>
             <div className="w-1/2">
