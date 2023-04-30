@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className="bg-gray-100" lang="en">
+    <html className="bg-gray-50" lang="en">
       <body>
         <NavBar/>
         <main className="m-4">{children}</main>
